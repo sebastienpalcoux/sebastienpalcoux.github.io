@@ -1,0 +1,138 @@
+SÉBASTIEN PALCOUX
+Associate Professor · BIMSA
+https://sebastienpalcoux.github.io/
+sebastienpalcoux@gmail.com
+
+ACADEMIC APPOINTMENTS
+2024 — PRESENT · Associate Professor · Beijing Institute of Mathematical Sciences and Applications · Beijing, China
+2020 — 2024 · Assistant Professor · Beijing Institute of Mathematical Sciences and Applications · Beijing, China
+2019 — 2020 · Visiting researcher · Yau Mathematical Sciences Center, Tsinghua University · Beijing, China
+2014 — 2016 · Postdoctoral researcher · Institute of Mathematical Sciences · Chennai, India · Mentor: V. S. Sunder
+2009 · PhD in Mathematics · Aix-Marseille University · Advisor: Antony Wassermann
+
+RESEARCH SUPPORT
+National Natural Science Foundation of China (NSFC), General Program (Grant no. 12471031), 2025-01-01 ~ 2028-12-31,
+Foreign Youth Talent Program, Ministry of Sciences and Technology of China, 2022,
+Start-up Research Fund, Beijing Institute of Mathematical Sciences and Application, 2020-2025,
+Research Grant, Ministry of Higher Education of France, 2005-2008.
+
+PUBLICATIONS
+Grothendieck rings of near-Tambara–Yamagami fusion categories
+Jingcheng Dong, Sébastien Palcoux and Kai Wang
+Preprint · arXiv:2610.35574
+https://arxiv.org/abs/2610.35574
+
+Classification of vanishing fusion rings of rank four
+Jingcheng Dong, Sébastien Palcoux and Arnaud Plessis
+Preprint · arXiv:2610.22000
+https://arxiv.org/abs/2610.22000
+
+Triangular prism equations for near-group categories: algebraic solutions and a unitary conjecture
+Huixuan He, Zhengwei Liu, Fan Lu, Sébastien Palcoux and Yunxiang Ren
+Preprint · arXiv:2610.11652
+https://arxiv.org/abs/2610.11652
+
+Classifying Grothendieck rings of pivotal fusion categories of rank four
+Jingcheng Dong, Sébastien Palcoux and Arnaud Plessis
+Preprint · arXiv:2609.33272
+https://arxiv.org/abs/2609.33272
+
+Local Ocneanu rigidity for separable algebra objects
+Tinhinane Amina Azzouz, Mainak Ghosh and Sébastien Palcoux
+Preprint · arXiv:2609.10440
+https://arxiv.org/abs/2609.10440
+
+Sharp bounds for intervals in finite subgroup lattices
+Sébastien Palcoux and Pablo Spiga
+Preprint · arXiv:2609.10343
+https://arxiv.org/abs/2609.10343
+
+A new criterion for integral modular categorification
+Jingcheng Dong and Sébastien Palcoux
+Preprint · arXiv:2510.10311
+https://arxiv.org/abs/2510.10311
+
+Frobenius subalgebra lattices in tensor categories
+Mainak Ghosh and Sébastien Palcoux
+Preprint · arXiv:2502.19876
+https://arxiv.org/abs/2502.19876
+
+Triangular Prism Equations and Categorification
+Zhengwei Liu, Sébastien Palcoux, Yunxiang Ren and Gert Vercleyen
+Preprint · arXiv:2203.06522
+https://arxiv.org/abs/2203.06522
+
+Classifying integral Grothendieck rings up to rank 5 and beyond
+Max A. Alekseyev, Winfried Bruns, Jingcheng Dong and Sébastien Palcoux
+Letters in Mathematical Physics 116, 141 (2026)
+https://arxiv.org/abs/2507.07023
+
+Classification of integral modular data up to rank 13
+Max A. Alekseyev, Winfried Bruns, Sébastien Palcoux and Fedor V. Petrov
+Journal of Mathematical Physics 67, 081701 (2026)
+https://arxiv.org/abs/2302.01613
+
+Exchange relations and Frobenius subalgebras
+Mainak Ghosh and Sébastien Palcoux
+Bulletin of the London Mathematical Society 58, no. 7, e70446 (2026)
+https://arxiv.org/abs/2511.13167
+
+Burnside-type results for fusion categories
+Sebastian Burciu and Sébastien Palcoux
+Communications in Contemporary Mathematics, 2650007 (2025)
+https://arxiv.org/abs/2302.07604
+
+Structure constants, Isaacs property and extended Haagerup fusion categories
+Sebastian Burciu and Sébastien Palcoux
+Communications in Algebra 53, no. 4, 1438–1452 (2025)
+https://arxiv.org/abs/2210.13936
+
+Complete Positivity of Comultiplication and Primary Criteria for Unitary Categorification
+Linzhe Huang, Zhengwei Liu, Sébastien Palcoux and Jinsong Wu
+International Mathematics Research Notices 2024, no. 1, 817–860
+https://arxiv.org/abs/2210.00792
+
+Interpolated family of non-group-like simple integral fusion rings of Lie type
+Zhengwei Liu, Sébastien Palcoux and Yunxiang Ren
+International Journal of Mathematics 34, no. 6, 2350030 (2023)
+https://arxiv.org/abs/2102.01663
+
+Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six
+Zhengwei Liu, Sébastien Palcoux and Yunxiang Ren
+Letters in Mathematical Physics 112, no. 3, 54 (2022)
+https://arxiv.org/abs/2010.10264
+
+Fusion bialgebras and Fourier analysis
+Zhengwei Liu, Sébastien Palcoux and Jinsong Wu
+Advances in Mathematics 390, 107905 (2021)
+https://arxiv.org/abs/1910.12059
+
+Boolean lattices in finite alternating and symmetric groups
+Andrea Lucchini, Mariapia Moscatiello, Sébastien Palcoux and Pablo Spiga
+Forum of Mathematics, Sigma 8, E55 (2020)
+https://arxiv.org/abs/1911.04516
+
+Ore's theorem on subfactor planar algebras
+Sébastien Palcoux
+Quantum Topology 11, no. 3, 525–543 (2020)
+https://arxiv.org/abs/1704.00745
+
+Euler totient of subfactor planar algebras
+Sébastien Palcoux
+Proceedings of the American Mathematical Society 146, no. 11, 4775–4786 (2018)
+https://arxiv.org/abs/1703.04486
+
+Dual Ore's theorem on distributive intervals of finite groups
+Sébastien Palcoux
+Journal of Algebra 505, 279–287 (2018)
+https://arxiv.org/abs/1708.02565
+
+On Boolean intervals of finite groups
+Mamta Balodi and Sébastien Palcoux
+Journal of Combinatorial Theory, Series A 157, 49–69 (2018)
+https://arxiv.org/abs/1604.06765
+
+Ore’s theorem on cyclic subfactor planar algebras and beyond
+Sébastien Palcoux
+Pacific Journal of Mathematics 292, no. 1, 203–221 (2018)
+https://arxiv.org/abs/1702.02124
