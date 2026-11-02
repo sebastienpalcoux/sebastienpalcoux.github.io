@@ -189,7 +189,7 @@ svg { display: block; }
 .supporting-papers .paper-summary { margin-bottom: 12px; }
 .supporting-papers .feature-meta { margin-bottom: 10px; }
 
-/* A scholarly index, with distinct years and optional reading mode. */
+/* A chronological bibliography with individually expandable summaries. */
 .publication { display: grid; grid-template-columns: 100px minmax(0,1fr); gap: 28px; padding: 30px 0; border-top: 1px solid var(--line); }
 .publication:last-child { border-bottom: 1px solid var(--line); }
 .pub-year { font-size: 13px; padding-top: 3px; color: var(--ink); }
@@ -721,4 +721,91 @@ body:has(#publications) .publication-year { padding-top: 18px; margin-top: 22px;
   .button { color: #000 !important; background: none !important; padding: 0; }
   .feature-paper.lead-paper { color: #000; background: #eee; }
   .lead-paper .paper-summary, .lead-paper .feature-meta, .lead-paper .text-link { color: #333; }
+}
+
+/* A shorter homepage, one bibliography view, and linked historical pages. */
+.home-hero { grid-template-columns: minmax(0,1fr) 250px; gap: 64px; padding-block: 52px 48px; }
+.home-hero h1 { font-size: clamp(64px,6.7vw,88px); margin-bottom: 19px; }
+.home-position { color: var(--indigo); font-size: 15px; margin-bottom: 13px; }
+.home-hero .hero-description { max-width: 550px; margin-bottom: 15px; line-height: 1.75; }
+.home-hero .hero-visual { max-width: 250px; }
+.home-hero .portrait-frame { padding: 7px; }
+.home-hero .portrait-frame img { aspect-ratio: 1; }
+.home-contact { display: flex; flex-wrap: wrap; gap: 5px 25px; font-size: 14px; }
+.home-contact a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; overflow-wrap: anywhere; }
+.home-contact a:hover { text-decoration: underline; }
+.home-project { margin-bottom: 48px; }
+.home-project .classification-intro, .home-project .classification-question { padding: 30px 35px; }
+.home-project .eyebrow { margin-bottom: 15px; }
+.home-project .classification-intro h2 { font-size: 39px; margin-bottom: 17px; }
+.home-project .classification-intro > p:not(.eyebrow) { font-size: 15px; line-height: 1.75; }
+.home-project .classification-question h3 { font: 33px/1.22 var(--serif); letter-spacing: -.02em; margin-bottom: 17px; }
+.home-papers { padding-bottom: 46px; }
+.home-papers .section-heading { margin-bottom: 18px; }
+.home-papers .section-heading h2, .home-activities h2 { font-size: 37px; margin: 0; }
+.home-paper { padding: 19px 0 13px; border-top: 1px solid var(--line); }
+.home-paper h3 { font: 26px/1.25 var(--serif); letter-spacing: -.015em; margin-bottom: 9px; }
+.home-paper h3 a:hover { color: var(--gold); }
+.home-paper .pub-authors, .home-paper .pub-venue { font-size: 13px; margin-bottom: 3px; }
+.home-activities { padding-bottom: 52px; }
+.home-activities h2 { margin-bottom: 22px; }
+.home-activities > p { display: grid; grid-template-columns: 82px minmax(0,1fr) 104px; gap: 15px; align-items: baseline; border-top: 1px solid var(--line); margin: 0; padding: 16px 0; font-size: 14px; }
+.home-activities > p > span, .home-activities small { color: var(--muted); font-size: 12px; }
+.home-activities > p > a:hover { text-decoration: underline; }
+.publication-search-tools { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding: 16px 0 5px; border-top: 1px solid var(--line); }
+.publication-search-tools .search-field { width: 420px; max-width: 100%; }
+.publication-search-tools > .text-link { border: 0; }
+.publication-search-state { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 22px; min-height: 44px; color: var(--muted); font-size: 12px; }
+.publication-year .publication { display: block; padding-block: 19px; }
+.publication-year .pub-body h3 { font-size: 27px; margin-bottom: 9px; }
+.publication-year .pub-authors, .publication-year .pub-venue { margin-bottom: 3px; }
+html:not(.js) .publication-search-tools .search-field, html:not(.js) .publication-search-state { display: none; }
+.archive-link-section { padding-bottom: 50px; }
+.archive-link-section > p { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 30px; align-items: center; }
+.archive-link-section > p > span { color: var(--muted); font-size: 14px; }
+.full-profile-back { padding-top: 25px; }
+.full-profile-back + .page-intro { padding-top: 30px; }
+.compact-cv .subheading:first-child { margin-top: 0; }
+.compact-cv .about-aside img { max-width: 200px; }
+.compact-cv .prose { padding: 0; }
+.compact-cv .prose p { font-size: 14px; }
+.full-profile-link { margin-top: 30px; }
+@media (max-width: 950px) {
+  .home-hero { grid-template-columns: minmax(0,1fr) 200px; gap: 35px; }
+  .home-hero h1 { font-size: 73px; }
+  .home-project .classification-intro, .home-project .classification-question { padding: 27px; }
+  .home-project .classification-intro h2 { font-size: 35px; }
+  .home-project .classification-question h3 { font-size: 29px; }
+}
+@media (max-width: 700px) {
+  .home-hero { display: block; position: relative; padding-block: 35px 30px; }
+  .home-hero h1 { padding-right: 104px; font-size: clamp(43px,11vw,62px); line-height: 1; margin-bottom: 20px; }
+  .home-hero .hero-visual { position: absolute; width: 92px; top: 35px; right: 0; }
+  .home-hero .portrait-frame { padding: 4px; }
+  .home-hero .portrait-frame img { object-position: 51% 47%; }
+  .home-position { font-size: 14px; }
+  .home-contact { font-size: 13px; gap: 0 20px; }
+  .home-project { margin-bottom: 33px; }
+  .home-project .classification-intro, .home-project .classification-question { padding: 26px; }
+  .home-project .classification-question h3 { font-size: 29px; }
+  .home-project .button { gap: 12px; padding-inline: 16px; }
+  .home-papers { padding-bottom: 32px; }
+  .home-papers .section-heading { gap: 10px; margin-bottom: 16px; }
+  .home-papers .section-heading h2, .home-activities h2 { font-size: 33px; }
+  .home-paper h3 { font-size: 25px; }
+  .home-activities { padding-bottom: 34px; }
+  .home-activities > p { grid-template-columns: 1fr; gap: 3px; padding-block: 15px; }
+  .home-activities small { margin-top: 3px; }
+  .publication-search-tools { gap: 3px; }
+  .publication-search-tools .search-field { width: 100%; }
+  .publication-year .pub-body h3 { font-size: 26px; }
+  .archive-link-section { padding-bottom: 35px; }
+}
+@media print {
+  .home-hero { display: block; padding: 0; }
+  .home-hero h1 { font-size: 38pt; padding: 0; }
+  .home-hero .hero-visual, .publication-search-tools, .publication-search-state { display: none; }
+  .home-project .classification-question h3 { font-size: 20pt; }
+  .publication-year .pub-body h3 { font-size: 15pt; }
+  .home-paper { break-inside: avoid; }
 }

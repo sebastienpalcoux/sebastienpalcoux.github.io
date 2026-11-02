@@ -1,7 +1,7 @@
 'use strict';
 (() => {
   let selectedStatus = 'All';
-  let selectedView = 'index';
+  let selectedTopic = 'All';
   let publicationData;
   let citationURL;
   let citationOpener;
@@ -20,24 +20,11 @@
     element.classList.add('visible');
     toastTimer = setTimeout(() => element.classList.remove('visible'), 2600);
   }
-  function applyPublicationView() {
-    const reading = selectedView === 'reading';
-    $('#publications')?.classList.toggle('is-reading', reading);
-    document.querySelectorAll('#publications .abstract-details').forEach(details => {
-      details.open = reading;
-    });
-    document.querySelectorAll('.view-button').forEach(button => {
-      const active = button.dataset.view === selectedView;
-      button.classList.toggle('active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-  }
-  function updatePublicationURL(query, topic) {
+  function updatePublicationURL(query) {
     const params = new URLSearchParams();
     if (query) params.set('q', query);
-    if (topic !== 'All') params.set('area', topic);
+    if (selectedTopic !== 'All') params.set('area', selectedTopic);
     if (selectedStatus !== 'All') params.set('status', selectedStatus);
-    if (selectedView === 'reading') params.set('view', 'reading');
     const suffix = params.size ? '?' + params.toString() : '';
     if (window.PALCOUX_PREVIEW) {
       const route = new URL(location.hash.startsWith('#!') ? location.hash.slice(2) : '/works/', 'https://sebastienpalcoux.github.io');
@@ -53,7 +40,6 @@
     const rows = document.querySelectorAll('#publications .publication');
     if (!rows.length) return;
     const query = $('#pub-search')?.value.trim() || '';
-    const selectedTopic = $('#topic-filter')?.value || 'All';
     const words = normalize(query).split(/\s+/).filter(Boolean);
     let count = 0;
     rows.forEach(row => {
@@ -68,34 +54,28 @@
       group.hidden = visibleCount === 0;
       const counter = group.querySelector('.year-count');
       if (counter) counter.textContent = `${visibleCount} ${visibleCount === 1 ? 'paper' : 'papers'}`;
-      document.querySelectorAll('.publication-index a[data-year]').forEach(anchor => {
-        if (anchor.dataset.year === group.dataset.year) anchor.hidden = group.hidden;
-      });
     });
-    $('.results-count').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
+    const noun = selectedStatus === 'Preprint' ? (count === 1 ? 'preprint' : 'preprints') : (count === 1 ? 'paper' : 'papers');
+    const status = selectedStatus === 'Published' ? ' published' : '';
+    const topic = selectedTopic === 'All' ? '' : ` · ${selectedTopic}`;
+    $('.results-count').textContent = `${count}${status} ${noun}${topic}`;
     $('#no-results').hidden = count !== 0;
     $('#reset-filters').hidden = !query && selectedStatus === 'All' && selectedTopic === 'All';
-    document.querySelectorAll('.filter-tab').forEach(tab => {
-      const active = tab.dataset.filter === selectedStatus;
-      tab.classList.toggle('active', active);
-      tab.setAttribute('aria-pressed', String(active));
-    });
-    if (updateURL) updatePublicationURL(query, selectedTopic);
+    if (updateURL) updatePublicationURL(query);
   }
   function init() {
     document.documentElement.classList.add('js');
     selectedStatus = 'All';
-    selectedView = 'index';
+    selectedTopic = 'All';
     closeMenu();
     const params = new URLSearchParams(window.PALCOUX_PREVIEW ? (window.PALCOUX_ROUTE_QUERY || '') : location.search);
     if ($('#pub-search')) {
       $('#pub-search').value = params.get('q') || '';
       const value = params.get('area') || 'All';
-      $('#topic-filter').value = Array.from($('#topic-filter').options).some(option => option.value === value) ? value : 'All';
+      const topics = Array.from(document.querySelectorAll('#publications .publication'), row => row.dataset.topic);
+      if (topics.includes(value)) selectedTopic = value;
       const status = params.get('status');
       if (['Published','Preprint'].includes(status)) selectedStatus = status;
-      if (params.get('view') === 'reading') selectedView = 'reading';
-      applyPublicationView();
       filterPublications(false);
     }
     if ($('#fusion-power')) {
@@ -158,16 +138,8 @@
       closeMenu();
     }
     if (event.target.closest('#site-nav a')) closeMenu();
-    const filter = event.target.closest('.filter-tab');
-    if (filter) { selectedStatus = filter.dataset.filter; filterPublications(); }
-    const view = event.target.closest('.view-button');
-    if (view && ['index', 'reading'].includes(view.dataset.view)) {
-      selectedView = view.dataset.view;
-      applyPublicationView();
-      filterPublications();
-    }
     if (event.target.closest('#reset-filters')) {
-      selectedStatus = 'All'; $('#pub-search').value = ''; $('#topic-filter').value = 'All';
+      selectedStatus = 'All'; selectedTopic = 'All'; $('#pub-search').value = '';
       filterPublications(); $('#pub-search').focus();
     }
     const citation = event.target.closest('.cite-button');
@@ -182,7 +154,6 @@
     if (event.target.matches('#pub-search')) filterPublications();
     if (event.target.matches('#fusion-power')) updateFusion();
   });
-  document.addEventListener('change', event => { if (event.target.matches('#topic-filter')) filterPublications(); });
   document.addEventListener('close', event => {
     if (event.target.matches('.citation-dialog') && citationOpener?.isConnected) citationOpener.focus();
   }, true);
