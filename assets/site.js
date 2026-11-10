@@ -2,7 +2,7 @@
 (() => {
   let selectedStatus = 'All';
   let selectedTopic = 'All';
-  const citationData = new Map();
+  let publicationData;
   let citationURL;
   let citationOpener;
   let toastTimer;
@@ -55,7 +55,17 @@
       const counter = group.querySelector('.year-count');
       if (counter) counter.textContent = `${visibleCount} ${visibleCount === 1 ? 'paper' : 'papers'}`;
     });
-    const noun = selectedStatus === 'Preprint' ? (count === 1 ? 'preprint' : 'preprints') : (count === 1 ? 'paper' : 'papers');
+    const regularGroup = $('.regular-publications');
+    if (regularGroup) regularGroup.hidden = !Array.from(regularGroup.querySelectorAll('.publication')).some(row => !row.hidden);
+    const aiSection = $('#ai-assisted');
+    if (aiSection) {
+      const visibleCount = Array.from(aiSection.querySelectorAll('.publication')).filter(row => !row.hidden).length;
+      aiSection.hidden = visibleCount === 0;
+      aiSection.querySelector('.ai-section-count').textContent = `${visibleCount} ${visibleCount === 1 ? 'publication' : 'publications'}`;
+    }
+    const noun = selectedStatus === 'Preprint' ? (count === 1 ? 'preprint' : 'preprints')
+      : selectedStatus === 'Published' ? (count === 1 ? 'paper' : 'papers')
+      : (count === 1 ? 'publication' : 'publications');
     const status = selectedStatus === 'Published' ? ' published' : '';
     const topic = selectedTopic === 'All' ? '' : ` · ${selectedTopic}`;
     $('.results-count').textContent = `${count}${status} ${noun}${topic}`;
@@ -64,10 +74,6 @@
     if (updateURL) updatePublicationURL(query);
   }
   function init() {
-    if (/^\/works\/(?:index\.html)?$/.test(location.pathname) && location.hash === '#paper-hexagon-2611-00233') {
-      location.replace('/ai-assisted/' + location.hash);
-      return;
-    }
     document.documentElement.classList.add('js');
     selectedStatus = 'All';
     selectedTopic = 'All';
@@ -87,23 +93,21 @@
       updateFusion();
     }
   }
-  async function papers(collection = 'publications') {
-    if (!['publications', 'ai-assisted'].includes(collection)) throw new Error('Unknown citation collection');
-    if (collection === 'publications' && window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
-    if (!citationData.has(collection)) {
-      const request = fetch(`/assets/${collection}.json?v=20261110-ai`).then(response => {
+  async function papers() {
+    if (window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
+    if (!publicationData) {
+      publicationData = fetch('/assets/publications.json?v=20261110-publications').then(response => {
         if (!response.ok) throw new Error('Citation data unavailable');
         return response.json();
-      }).catch(error => { citationData.delete(collection); throw error; });
-      citationData.set(collection, request);
+      }).catch(error => { publicationData = undefined; throw error; });
     }
-    return citationData.get(collection);
+    return publicationData;
   }
   async function showCitation(button) {
     button.disabled = true;
     try {
       const identifier = button.dataset.publicationId || button.dataset.arxiv;
-      const record = (await papers(button.dataset.citationCollection || 'publications')).find(item => (item.id || item.arxiv) === identifier);
+      const record = (await papers()).find(item => (item.id || item.arxiv) === identifier);
       if (!record?.bibtex) throw new Error('Citation unavailable');
       const dialog = $('.citation-dialog');
       $('.citation-paper-title').textContent = record.title;
@@ -148,6 +152,10 @@
     if (event.target.closest('#reset-filters')) {
       selectedStatus = 'All'; selectedTopic = 'All'; $('#pub-search').value = '';
       filterPublications(); $('#pub-search').focus();
+    }
+    if (event.target.closest('a[href="#ai-assisted"]') && $('#ai-assisted')) {
+      selectedStatus = 'All'; selectedTopic = 'All'; $('#pub-search').value = '';
+      filterPublications();
     }
     const citation = event.target.closest('.cite-button');
     if (citation) await showCitation(citation);

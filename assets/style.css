@@ -810,42 +810,49 @@ html:not(.js) .publication-search-tools .search-field, html:not(.js) .publicatio
   .home-paper { break-inside: avoid; }
 }
 
-/* Hexagon releases have their own visible place in the site. */
-.home-ai-latest { margin: 19px 0 20px; }
-.home-ai-latest > span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
-.home-ai-latest > a { display: block; font: 22px/1.35 var(--serif); color: var(--indigo); }
-.home-ai-latest > a:hover, .home-ai-atlas a:hover { text-decoration: underline; }
-.home-ai-work .home-ai-atlas { margin: 0 0 19px; }
-.home-ai-atlas > a { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; min-height: 44px; }
-.ai-work-callout { padding: 19px 25px; margin-bottom: 30px; background: var(--pale); border-left: 3px solid var(--indigo); }
-.ai-work-callout > a { font: 25px/1.3 var(--serif); color: var(--indigo); }
-.ai-work-callout > a:hover { text-decoration: underline; }
-.ai-work-callout > p { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
-.ai-intro-note { font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 800px; margin: 19px 0 0; }
-.ai-page-tools { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 25px; padding-block: 12px 22px; font-size: 13px; color: var(--muted); }
-.ai-projects { padding-bottom: 55px; }
-.ai-project { border-top: 1px solid var(--line); padding: 34px 0; scroll-margin-top: 34px; }
+/* AI-assisted manuscripts are a subsection of Publications. */
+.home-publications-shortcut { margin: 0; }
+.home-publications-shortcut > a { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; color: var(--indigo); font-size: 14px; text-decoration: underline; text-decoration-color: #b9b0cf; }
+.publication-top-link { margin-top: 0; margin-bottom: 25px; }
+.publication-top-link > a { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 11px; min-height: 44px; color: var(--indigo); font: 24px/1.4 var(--serif); border-bottom: 1px solid #b9b0cf; }
+.publication-top-link > a > span:first-child { font: 13px/1.6 var(--sans); color: var(--muted); }
+.home-guiding-question .classification-question h2 { font-size: 35px; }
+.home-guiding-question .classification-intro h3 { font: 29px/1.25 var(--serif); letter-spacing: -.02em; margin: 0 0 18px; }
+.home-guiding-question .classification-intro h3 a:hover { color: var(--gold); }
+.home-guiding-question .classification-intro .guiding-work-meta { font-size: 12px; line-height: 1.7; color: var(--muted); }
+.guiding-work-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.guiding-work-links .text-link { font-size: 12px; gap: 13px; }
+.bibliography-group-label { color: var(--muted); font-size: 12px; letter-spacing: .04em; margin: 12px 0 0; }
+.ai-publications { margin-top: 40px; padding-top: 31px; border-top: 2px solid var(--line); scroll-margin-top: 32px; }
+.ai-publications .section-heading { align-items: flex-end; margin-bottom: 20px; }
+.ai-publications .section-heading h2 { font-size: 40px; }
+.ai-section-description { font-size: 14px; line-height: 1.8; color: var(--muted); margin: 14px 0 8px; max-width: 750px; }
+.ai-section-count { font-size: 12px; color: var(--muted); }
+.ai-project { display: block; border-top: 1px solid var(--line); padding: 30px 0; scroll-margin-top: 32px; }
 .ai-project .eyebrow { margin-bottom: 15px; }
-.ai-project h2 { font-size: 37px; line-height: 1.2; max-width: 1000px; margin-bottom: 17px; }
-.ai-project h2 a:hover { color: var(--gold); }
+.ai-project h3 { font: 33px/1.23 var(--serif); letter-spacing: -.02em; max-width: 1000px; margin-bottom: 17px; }
+.ai-project h3 a:hover { color: var(--gold); }
 .ai-project-summary { max-width: 900px; font-size: 16px; color: var(--muted); line-height: 1.85; margin-block: 20px; }
 .ai-verification { max-width: 900px; padding: 13px 18px; margin: 20px 0 13px; background: var(--pale); border-left: 2px solid #b7add1; }
 .ai-verification p { font-size: 14px; line-height: 1.8; color: var(--muted); margin: 0; }
 .ai-project .pub-actions { gap: 9px 25px; }
 .ai-project .pub-actions > a, .ai-project .cite-button { font-size: 13px; }
 @media (max-width: 700px) {
-  .home-ai-work .classification-intro h2 { font-size: 35px; }
-  .home-ai-latest > a { font-size: 22px; }
-  .ai-work-callout { padding: 19px 21px; margin-bottom: 23px; }
-  .ai-work-callout > a { font-size: 24px; }
-  .ai-project { padding-block: 28px; }
-  .ai-project h2 { font-size: 31px; }
+  .home-publications-shortcut > a { font-size: 13px; }
+  .publication-top-link { margin-bottom: 20px; }
+  .publication-top-link > a { font-size: 23px; }
+  .home-guiding-question .classification-question h2 { font-size: 31px; }
+  .home-guiding-question .classification-intro h3 { font-size: 28px; }
+  .ai-publications { margin-top: 28px; padding-top: 26px; }
+  .ai-publications .section-heading { align-items: flex-start; gap: 12px; }
+  .ai-publications .section-heading h2 { font-size: 35px; }
+  .ai-project { padding-block: 26px; }
+  .ai-project h3 { font-size: 29px; }
   .ai-project .pub-actions { gap: 5px 22px; }
   .ai-verification { padding: 12px 15px; }
-  .ai-projects { padding-bottom: 30px; }
 }
 @media print {
-  .ai-page-tools { display: none; }
-  .ai-project h2 { font-size: 19pt; }
+  .publication-top-link, .ai-publications .section-heading > a { display: none; }
+  .ai-project h3 { font-size: 18pt; }
   .ai-project { break-inside: avoid; }
 }
