@@ -2,7 +2,7 @@
 (() => {
   let selectedStatus = 'All';
   let selectedTopic = 'All';
-  let publicationData;
+  const citationData = new Map();
   let citationURL;
   let citationOpener;
   let toastTimer;
@@ -64,6 +64,10 @@
     if (updateURL) updatePublicationURL(query);
   }
   function init() {
+    if (/^\/works\/(?:index\.html)?$/.test(location.pathname) && location.hash === '#paper-hexagon-2611-00233') {
+      location.replace('/ai-assisted/' + location.hash);
+      return;
+    }
     document.documentElement.classList.add('js');
     selectedStatus = 'All';
     selectedTopic = 'All';
@@ -83,21 +87,23 @@
       updateFusion();
     }
   }
-  async function papers() {
-    if (window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
-    if (!publicationData) {
-      publicationData = fetch('/assets/publications.json?v=20261110').then(response => {
+  async function papers(collection = 'publications') {
+    if (!['publications', 'ai-assisted'].includes(collection)) throw new Error('Unknown citation collection');
+    if (collection === 'publications' && window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
+    if (!citationData.has(collection)) {
+      const request = fetch(`/assets/${collection}.json?v=20261110-ai`).then(response => {
         if (!response.ok) throw new Error('Citation data unavailable');
         return response.json();
-      }).catch(error => { publicationData = undefined; throw error; });
+      }).catch(error => { citationData.delete(collection); throw error; });
+      citationData.set(collection, request);
     }
-    return publicationData;
+    return citationData.get(collection);
   }
   async function showCitation(button) {
     button.disabled = true;
     try {
       const identifier = button.dataset.publicationId || button.dataset.arxiv;
-      const record = (await papers()).find(item => (item.id || item.arxiv) === identifier);
+      const record = (await papers(button.dataset.citationCollection || 'publications')).find(item => (item.id || item.arxiv) === identifier);
       if (!record?.bibtex) throw new Error('Citation unavailable');
       const dialog = $('.citation-dialog');
       $('.citation-paper-title').textContent = record.title;
@@ -110,7 +116,7 @@
       dialog.showModal();
       $('#copy-citation').focus();
     } catch (error) {
-      toast('The complete BibTeX file is available on the Publications page.');
+      toast('Use the BibTeX download on this page for the complete citation file.');
     } finally { button.disabled = false; }
   }
   function fusionPower(n) {
