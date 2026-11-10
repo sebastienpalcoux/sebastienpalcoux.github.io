@@ -86,7 +86,7 @@
   async function papers() {
     if (window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
     if (!publicationData) {
-      publicationData = fetch('/assets/publications.json').then(response => {
+      publicationData = fetch('/assets/publications.json?v=20261110').then(response => {
         if (!response.ok) throw new Error('Citation data unavailable');
         return response.json();
       }).catch(error => { publicationData = undefined; throw error; });
@@ -96,7 +96,8 @@
   async function showCitation(button) {
     button.disabled = true;
     try {
-      const record = (await papers()).find(item => item.arxiv === button.dataset.arxiv);
+      const identifier = button.dataset.publicationId || button.dataset.arxiv;
+      const record = (await papers()).find(item => (item.id || item.arxiv) === identifier);
       if (!record?.bibtex) throw new Error('Citation unavailable');
       const dialog = $('.citation-dialog');
       $('.citation-paper-title').textContent = record.title;
@@ -104,7 +105,7 @@
       if (citationURL) URL.revokeObjectURL(citationURL);
       citationURL = URL.createObjectURL(new Blob([record.bibtex + '\n'], {type:'application/x-bibtex;charset=utf-8'}));
       $('#download-citation').href = citationURL;
-      $('#download-citation').download = 'Palcoux-' + record.arxiv + '.bib';
+      $('#download-citation').download = 'Palcoux-' + (record.id || record.arxiv) + '.bib';
       citationOpener = button;
       dialog.showModal();
       $('#copy-citation').focus();

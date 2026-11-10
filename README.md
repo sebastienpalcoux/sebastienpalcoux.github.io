@@ -6,6 +6,6 @@ This repository contains the deployable static website. Edit its readable HTML d
 
 The main pages are Research, Publications, Teaching, Talks, and CV; the name in the header links home. Historical fusion-ring material is preserved at `/research/archive/`, and the detailed academic profile at `/cv/full/`. The existing aliases and publication anchors remain available.
 
-All 24 publication records, bibliographic downloads, summaries, course materials, and research resources are retained. Publications use one chronological list with search and individually expandable summaries. Existing `q`, `area`, and `status` query links remain supported.
+All 25 publication records, bibliographic downloads, summaries, course materials, and research resources are retained. Publications use one chronological list with search and individually expandable summaries. Existing `q`, `area`, and `status` query links remain supported.
 
 The independent classification website under `/grothendieck-ring-classification/` retains its own repository and publishing configuration.
