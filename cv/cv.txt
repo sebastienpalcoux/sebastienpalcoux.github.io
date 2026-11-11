@@ -138,10 +138,10 @@ Pacific Journal of Mathematics 292, no. 1, 203–221 (2018)
 https://arxiv.org/abs/1702.02124
 
 AI-ASSISTED PUBLICATIONS (HEXAGON)
-Prime factors of fusion-category dimensions: weak group-theoreticity and decomposition
+Prime factors of fusion-category dimensions: weak group-theoreticity, rank and decomposition
 Sebastian Burciu, Jingcheng Dong and Sébastien Palcoux
-10 November 2026 · Hexagon:2611.00233v1 · AI-assisted research release
-https://hexagonmath.org/2611.00233v1
+11 November 2026 · Hexagon:2611.00233v2 · AI-assisted research release
+https://hexagonmath.org/2611.00233v2
 
 Low-rank Grothendieck rings: an AI-assisted classification project, constructions, and open problems
 Sébastien Palcoux
