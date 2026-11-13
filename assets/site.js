@@ -96,7 +96,7 @@
   async function papers() {
     if (window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
     if (!publicationData) {
-      publicationData = fetch('/assets/publications.json?v=20261111-v2').then(response => {
+      publicationData = fetch('/assets/publications.json?v=20261113-current').then(response => {
         if (!response.ok) throw new Error('Citation data unavailable');
         return response.json();
       }).catch(error => { publicationData = undefined; throw error; });

@@ -13,3 +13,5 @@ Search, citation data in `assets/publications.json`, and the `publications.bib` 
 The former `/ai-assisted/` page redirects to the Publications subsection, preserving manuscript fragments. Existing `/works/#paper-hexagon-2611-00233` links now open the manuscript directly on Publications.
 
 The independent classification website under `/grothendieck-ring-classification/` retains its own repository and publishing configuration. All course materials, historical resources, and regular publication records are retained.
+
+Use the permanent Hexagon record URL `https://hexagonmath.org/2611.00233` without a version suffix in links and citations. The publication year, main-branch PDF and short-proofs directory keep the entry independent of individual releases.

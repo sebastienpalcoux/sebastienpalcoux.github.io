@@ -140,8 +140,8 @@ https://arxiv.org/abs/1702.02124
 AI-ASSISTED PUBLICATIONS (HEXAGON)
 Prime factors of fusion-category dimensions: weak group-theoreticity, rank and decomposition
 Sebastian Burciu, Jingcheng Dong and Sébastien Palcoux
-11 November 2026 · Hexagon:2611.00233v2 · AI-assisted research release
-https://hexagonmath.org/2611.00233v2
+Hexagon:2611.00233 · 2026 · AI-assisted research
+https://hexagonmath.org/2611.00233
 
 Low-rank Grothendieck rings: an AI-assisted classification project, constructions, and open problems
 Sébastien Palcoux
