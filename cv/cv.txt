@@ -47,20 +47,10 @@ Sébastien Palcoux and Pablo Spiga
 Preprint · arXiv:2609.10343
 https://arxiv.org/abs/2609.10343
 
-A new criterion for integral modular categorification
-Jingcheng Dong and Sébastien Palcoux
-Preprint · arXiv:2510.10311
-https://arxiv.org/abs/2510.10311
-
-Frobenius subalgebra lattices in tensor categories
+Exchange relations and Frobenius subalgebras
 Mainak Ghosh and Sébastien Palcoux
-Preprint · arXiv:2502.19876
-https://arxiv.org/abs/2502.19876
-
-Triangular Prism Equations and Categorification
-Zhengwei Liu, Sébastien Palcoux, Yunxiang Ren and Gert Vercleyen
-Preprint · arXiv:2203.06522
-https://arxiv.org/abs/2203.06522
+Bulletin of the London Mathematical Society 58, no. 7, e70446 (2026)
+https://arxiv.org/abs/2511.13167
 
 Classifying integral Grothendieck rings up to rank 5 and beyond
 Max A. Alekseyev, Winfried Bruns, Jingcheng Dong and Sébastien Palcoux
@@ -72,10 +62,15 @@ Max A. Alekseyev, Winfried Bruns, Sébastien Palcoux and Fedor V. Petrov
 Journal of Mathematical Physics 67, 081701 (2026)
 https://arxiv.org/abs/2302.01613
 
-Exchange relations and Frobenius subalgebras
+A new criterion for integral modular categorification
+Jingcheng Dong and Sébastien Palcoux
+Preprint · arXiv:2510.10311
+https://arxiv.org/abs/2510.10311
+
+Frobenius subalgebra lattices in tensor categories
 Mainak Ghosh and Sébastien Palcoux
-Bulletin of the London Mathematical Society 58, no. 7, e70446 (2026)
-https://arxiv.org/abs/2511.13167
+Preprint · arXiv:2502.19876
+https://arxiv.org/abs/2502.19876
 
 Burnside-type results for fusion categories
 Sebastian Burciu and Sébastien Palcoux
@@ -97,6 +92,11 @@ Zhengwei Liu, Sébastien Palcoux and Yunxiang Ren
 International Journal of Mathematics 34, no. 6, 2350030 (2023)
 https://arxiv.org/abs/2102.01663
 
+Triangular Prism Equations and Categorification
+Zhengwei Liu, Sébastien Palcoux, Yunxiang Ren and Gert Vercleyen
+Preprint · arXiv:2203.06522
+https://arxiv.org/abs/2203.06522
+
 Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six
 Zhengwei Liu, Sébastien Palcoux and Yunxiang Ren
 Letters in Mathematical Physics 112, no. 3, 54 (2022)
@@ -117,41 +117,41 @@ Sébastien Palcoux
 Quantum Topology 11, no. 3, 525–543 (2020)
 https://arxiv.org/abs/1704.00745
 
-Euler totient of subfactor planar algebras
-Sébastien Palcoux
-Proceedings of the American Mathematical Society 146, no. 11, 4775–4786 (2018)
-https://arxiv.org/abs/1703.04486
-
 Dual Ore's theorem on distributive intervals of finite groups
 Sébastien Palcoux
 Journal of Algebra 505, 279–287 (2018)
 https://arxiv.org/abs/1708.02565
 
-On Boolean intervals of finite groups
-Mamta Balodi and Sébastien Palcoux
-Journal of Combinatorial Theory, Series A 157, 49–69 (2018)
-https://arxiv.org/abs/1604.06765
+Euler totient of subfactor planar algebras
+Sébastien Palcoux
+Proceedings of the American Mathematical Society 146, no. 11, 4775–4786 (2018)
+https://arxiv.org/abs/1703.04486
 
 Ore’s theorem on cyclic subfactor planar algebras and beyond
 Sébastien Palcoux
 Pacific Journal of Mathematics 292, no. 1, 203–221 (2018)
 https://arxiv.org/abs/1702.02124
 
+On Boolean intervals of finite groups
+Mamta Balodi and Sébastien Palcoux
+Journal of Combinatorial Theory, Series A 157, 49–69 (2018)
+https://arxiv.org/abs/1604.06765
+
 AI-ASSISTED PUBLICATIONS (HEXAGON)
-Grothendieck rings of complex fusion categories: rank 2
+Grothendieck rings of complex fusion categories: rank 4
 Sébastien Palcoux
-Hexagon:2611.00641 · 2026 · 3 pages
-https://hexagonmath.org/2611.00641
+Hexagon:2611.00645 · 2026 · 50 pages
+https://hexagonmath.org/2611.00645
 
 Grothendieck rings of complex fusion categories: rank 3
 Sébastien Palcoux
 Hexagon:2611.00642 · 2026 · 10 pages
 https://hexagonmath.org/2611.00642
 
-Grothendieck rings of complex fusion categories: rank 4
+Grothendieck rings of complex fusion categories: rank 2
 Sébastien Palcoux
-Hexagon:2611.00645 · 2026 · 50 pages
-https://hexagonmath.org/2611.00645
+Hexagon:2611.00641 · 2026 · 3 pages
+https://hexagonmath.org/2611.00641
 
 Invariant tensor dimensions as Hamburger moments
 Teo Banica and Sébastien Palcoux
