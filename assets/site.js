@@ -61,7 +61,7 @@
     if (aiSection) {
       const visibleCount = Array.from(aiSection.querySelectorAll('.publication')).filter(row => !row.hidden).length;
       aiSection.hidden = visibleCount === 0;
-      aiSection.querySelector('.ai-section-count').textContent = `${visibleCount} ${visibleCount === 1 ? 'publication' : 'publications'}`;
+      aiSection.querySelector('.ai-section-count').textContent = `${visibleCount} Hexagon ${visibleCount === 1 ? 'submission' : 'submissions'}`;
     }
     const noun = selectedStatus === 'Preprint' ? (count === 1 ? 'preprint' : 'preprints')
       : selectedStatus === 'Published' ? (count === 1 ? 'paper' : 'papers')
@@ -96,7 +96,7 @@
   async function papers() {
     if (window.PALCOUX_PUBLICATIONS) return window.PALCOUX_PUBLICATIONS;
     if (!publicationData) {
-      publicationData = fetch('/assets/publications.json?v=20261113-current').then(response => {
+      publicationData = fetch('/assets/publications.json?v=20261119-hexagon').then(response => {
         if (!response.ok) throw new Error('Citation data unavailable');
         return response.json();
       }).catch(error => { publicationData = undefined; throw error; });

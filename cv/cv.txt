@@ -138,6 +138,31 @@ Pacific Journal of Mathematics 292, no. 1, 203–221 (2018)
 https://arxiv.org/abs/1702.02124
 
 AI-ASSISTED PUBLICATIONS (HEXAGON)
+Grothendieck rings of complex fusion categories: rank 2
+Sébastien Palcoux
+Hexagon:2611.00641 · 2026 · 3 pages
+https://hexagonmath.org/2611.00641
+
+Grothendieck rings of complex fusion categories: rank 3
+Sébastien Palcoux
+Hexagon:2611.00642 · 2026 · 10 pages
+https://hexagonmath.org/2611.00642
+
+Grothendieck rings of complex fusion categories: rank 4
+Sébastien Palcoux
+Hexagon:2611.00645 · 2026 · 50 pages
+https://hexagonmath.org/2611.00645
+
+Invariant tensor dimensions as Hamburger moments
+Teo Banica and Sébastien Palcoux
+Hexagon:2611.00603 · 2026 · 50 pages
+https://hexagonmath.org/2611.00603
+
+A Universal Square-Root-of-Six Bound for Kissing Numbers
+Sébastien Palcoux
+Hexagon:2611.00586 · 2026 · 6 pages
+https://hexagonmath.org/2611.00586
+
 Prime factors of fusion-category dimensions: weak group-theoreticity, rank and decomposition
 Sebastian Burciu, Jingcheng Dong and Sébastien Palcoux
 Hexagon:2611.00233 · 2026 · AI-assisted research
