@@ -6,11 +6,11 @@ This repository contains the deployable static website. Edit its readable HTML d
 
 The main pages are Research, Publications, Teaching, Talks, and CV; the name in the header links home. Historical fusion-ring material is preserved at `/research/archive/`, and the detailed academic profile at `/cv/full/`.
 
-Publications contains all 32 records: 24 journal articles and arXiv preprints, followed by the eight Hexagon manuscripts in the open AI-assisted publications subsection at `/works/#ai-assisted`. Links at the top of Publications and the homepage open this subsection. The eight Hexagon entries include the ranks 2–5 series, the Hamburger-moments paper, the kissing-number bound, the WGT manuscript, and the classification overview. The homepage connects the WGT manuscript's dimension and rank restrictions to the guiding question.
+Publications contains all 33 records: 24 journal articles and arXiv preprints, followed by the nine Hexagon manuscripts in the open AI-assisted publications subsection at `/works/#ai-assisted`. Links at the top of Publications and the homepage open this subsection. The nine Hexagon entries include the ranks 2–5 series, the rank-six sphericality manuscript, the Hamburger-moments paper, the kissing-number bound, the WGT manuscript, and the classification overview. The homepage connects the WGT manuscript's dimension and rank restrictions to the guiding question.
 
 Within the regular bibliography, entries are ordered by displayed publication year (newest first), then by the original arXiv identifier. Hexagon works are ordered by their original identifiers, newest first; later revisions do not change this order. Lean-verified works use their registration dates. Citation downloads, metadata and the text CV follow the corresponding publication order.
 
-Search, citation data in `assets/publications.json`, and the `publications.bib` download cover all 32 publications. `assets/ai-assisted.json` and `ai-assisted.bib` retain the eight-entry subset. Individual citations and existing `q`, `area`, and `status` links remain supported.
+Search, citation data in `assets/publications.json`, and the `publications.bib` download cover all 33 publications. `assets/ai-assisted.json` and `ai-assisted.bib` retain the nine-entry subset. Individual citations and existing `q`, `area`, and `status` links remain supported.
 
 The former `/ai-assisted/` page redirects to the Publications subsection, preserving manuscript fragments. Existing `/works/#paper-hexagon-2611-00233` links now open the manuscript directly on Publications.
 

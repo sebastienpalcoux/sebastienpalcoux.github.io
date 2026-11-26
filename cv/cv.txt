@@ -138,9 +138,14 @@ Journal of Combinatorial Theory, Series A 157, 49–69 (2018)
 https://arxiv.org/abs/1604.06765
 
 AI-ASSISTED PUBLICATIONS (HEXAGON)
+Spherical structures on fusion categories of rank six
+Sébastien Palcoux
+Hexagon:2611.01078v1 · 2026 · 112 pages
+https://hexagonmath.org/2611.01078
+
 Grothendieck rings of complex fusion categories: rank 5
-Contributor: Sébastien Palcoux
-Hexagon:2611.00986 · 2026 · 72 pages
+Sébastien Palcoux
+Hexagon:2611.00986v2 · 2026 · 72 pages
 https://hexagonmath.org/2611.00986
 
 Grothendieck rings of complex fusion categories: rank 4
